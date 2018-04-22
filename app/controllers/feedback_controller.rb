@@ -2,6 +2,10 @@ require 'net/http'
 
 class FeedbackController < ApplicationController
 
+  def request_f
+    render html: '<div>Please work.</div>'.html_safe
+  end
+
   def request_feedback
     message = params[:text].gsub(params[:trigger_word], '').strip
 
