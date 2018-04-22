@@ -7,7 +7,7 @@ class FeedbackController < ApplicationController
   end
 
   def request_feedback
-    message = params[:text].gsub(params[:trigger_word], '').strip
+    message = 'issues_twbs/bootstrap'
 
     action, repo = message.split('_').map {|c| c.strip.downcase }
     repo_url = URI("https://api.github.com/repos/#{repo}")
